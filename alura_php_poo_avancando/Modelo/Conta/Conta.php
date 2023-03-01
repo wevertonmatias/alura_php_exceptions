@@ -30,8 +30,7 @@ abstract class Conta
         $tarifa = $valor * $this->percentualTarifa();
         $valor += $tarifa;
         if($this->saldo < $valor) {
-            echo "Saldo indisponível";
-            return;
+            throw new SaldoInsificienteExecption($valor, $this->saldo);
         }
         $this->saldo -= $valor;
     }

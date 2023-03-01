@@ -19,5 +19,5 @@ $conta = new ContaPoupanca(
     );
 
 $conta->depositar(500);
-$conta->sacar(100);
+$conta->sacar(600);
 $conta->mostrarSaldo();
