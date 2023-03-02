@@ -38,8 +38,7 @@ abstract class Conta
     public function depositar($valor)
     {
         if($valor <= 0) {
-            echo "Erro: valor negativo.";
-            return;
+            throw new \InvalidArgumentException();
         }
         $this->saldo += $valor;
     }
